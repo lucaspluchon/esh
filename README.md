@@ -21,5 +21,9 @@ esh is now accessible on http://localhost:3000
 **You will have to put your firebase credentials in storage/database.js**
 
 ## Preview
+### Website
+
+You can test esh on : https://easy-shortener.herokuapp.com
+
 ### Screenshot
 ![](https://i.ibb.co/jGxVZ7H/Capture-d-cran-2022-02-13-22-06-27.png)
