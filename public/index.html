@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="styles/reset.css"> <!--- Reset CSS --->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="image/favicon.ico" />
+    <title>esh - an easy shortener</title>
+</head>
+<body>
+    <div id="app">
+        <div id="banner">
+            <div id="logo">
+                <h2>esh</h2>
+                <h3 id="sublogo">easy and open-source</h3>
+            </div>
+            <a target="_blank" href="https://github.com/lucaspluchon/esh" class="important_button" id="donation">GitHub repo 💻️</a>
+        </div>
+        <div id="center-container">
+            <div id="content">
+                <h1>copy your <strong>link</strong> and let’s <strong>go</strong></h1>
+                <div id="center-container2">
+                    <div id="shortener">
+                        <div id="user_input">
+                            <input @keyup.enter="shortLink(user_input)" v-model="user_input" type="text" placeholder="http://example.com">
+                            <input @click="shortLink(user_input)" type="button" value="GO">
+                        </div>
+                        <div v-if="show_result === true" id="container-result">
+                            <div v-bind:style="{ 'border-color': b_color }" id="result-shortener">
+                                <div id="loader" v-if="ready === false && error === false"></div>
+                                <div id="info_shortener" v-if="ready === true && error === false">
+                                    <p id="link">your link : <a :href="link">{{ beautify_link }}</a></p>
+                                    <button @click="copyLink" class="copy-button">copy</button>
+                                </div>
+                                <div v-if="error === true" id="error">
+                                    <p>{{ error_msg }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3.2.30/dist/vue.global.js"></script> <!--- Vue.JS 3-->
+    <script src="scripts/app.js"></script>
+</body>
+<footer>
+    <p>Made by <strong>Lucas P.</strong></p>
+    <a target="_blank" href="https://github.com/lucaspluchon">
+        <img src="image/github.png" width="32" height="32">
+     </a>
+</footer>
+</html>

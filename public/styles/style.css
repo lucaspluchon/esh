@@ -1,0 +1,394 @@
+@font-face 
+{
+    font-family: 'Coolvetica-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Coolvetica-Regular'), url('../fonts/coolvetica.woff') format('woff');
+}
+
+@font-face 
+{
+    font-family: 'ProximaNova-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/proxima-nova.ttf');
+}
+
+@font-face 
+{
+    font-family: 'ProximaNova-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/proxima-nova-bold.otf');
+}
+
+
+strong
+{
+    font-family: 'ProximaNova-Bold';
+}
+
+h1
+{
+    font-size: 42px;
+    color: white;
+    font-family: "ProximaNova-Regular";
+    text-shadow: 0px 0px 16px rgba(0,0,0,0.40);
+    text-align: center;
+}
+
+h2
+{
+    font-size: 35px;
+    font-family: "Coolvetica-Regular";
+    font-weight: 800;
+    color: white;
+}
+
+h3
+{
+    font-size: 25px;
+    font-family: "ProximaNova-Regular";
+    color: white;
+}
+
+p
+{
+    font-family: "ProximaNova-Regular";
+    font-size: 18px;
+    color: white;
+}
+
+body a
+{
+    color: white;
+    font-family: 'ProximaNova-Bold';
+    transition: 0.2s;
+}
+
+body a:hover
+{
+    text-shadow: 0px 0px 16px rgba(0,0,0,0.40);
+}
+
+
+html, body
+{
+    width: 100%;
+    background: #3c4146;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+}
+
+footer a
+{
+    margin-left: 10px;
+    position: relative;
+    top: -2px;
+    color: white;
+}
+
+img
+{
+    transition: 0.2s;
+}
+
+img:hover
+{
+    box-shadow: 0px 0px 16px rgba(0,0,0,0.30);
+}
+
+.important_button
+{
+    background-color: #2e86de;
+    font-family: "ProximaNova-Regular";
+    font-size: 15px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    line-height: 35px;
+    text-decoration: none;
+}
+
+.important_button:hover
+{
+    background-color: white;
+    color: black;
+}
+
+#banner
+{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo
+{
+    margin-left: 120px;
+}
+
+#sublogo
+{
+    margin-top: 3px;
+}
+
+#donation
+{
+    height: 37px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 120px;
+    margin-top: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#center-container
+{
+    margin-top: 330px;
+}
+
+#center-container2
+{
+    width: 100%;
+    text-align: center;
+}
+
+#content
+{
+    margin-top: -150px;
+}
+
+#user_input
+{
+    background-color: transparent;
+    border-color: #2e86de;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+
+    height: 40px;
+    width: 600px;
+
+    padding-left: 10px;
+    color: white;
+
+    font-family: 'ProximaNova-Regular';
+}
+
+#shortener 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#shortener input[type=text]
+{
+    height: 40px;
+    width: 550px;
+    background: none;
+    border: none;
+    color: white;
+
+    font-family: 'ProximaNova-Regular';
+}
+
+#shortener input[type=text]::placeholder
+{
+    color: #777a7c;
+}
+
+#shortener input[type=button]
+{
+    background-color: transparent;
+    border-color: #2e86de;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    height: 35px;
+    color: white;
+    font-family: 'ProximaNova-Regular';
+    position: relative;
+    left: -5px;
+    top: 2px;
+    transition: 0.3s;
+}
+
+#shortener input[type=button]:hover
+{
+    background-color: #2e86de;
+}
+
+
+#container-result
+{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+#result-shortener
+{
+    width: 613px;
+    height: 60px;
+    border-color: #2e86de;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: #5d646c;
+    transition: opacity 0.5s;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#loader
+{
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin: 5px auto auto;
+}
+
+@-webkit-keyframes spin
+{
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#error p
+{
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#info_shortener
+{
+    margin-top: 10px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#link
+{
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.copy-button
+{
+    background-color: transparent;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 2px;
+    color: white;
+    border-style: solid;
+    box-shadow: rgba(50, 50, 93, 0.30) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: 0.2s;
+    width: 60px;
+    height: 40px;
+}
+
+.copy-button:hover
+{
+    background-color: white;
+    color: black;
+}
+
+@media all and (max-height: 650px)
+{
+    #content
+    {
+        margin-top: -220px;
+    }
+}
+
+@media all and (max-height: 460px)
+{
+    footer
+    {
+        opacity: 0;
+    }
+}
+
+@media all and (max-width: 710px)
+{
+    #result-shortener
+    {
+        width: 400px;
+    }
+
+    #info_shortener
+    {
+        margin-top: 15px;
+    }
+
+    #user_input
+    {
+        width: 390px;
+    }
+
+    h1
+    {
+        font-size: 32px;
+    }
+
+    #link
+    {
+        font-size: 15px;
+        margin-right: 60px;
+    }
+
+    .copy-button
+    {
+      width: 44px;
+      height: 30px;
+      font-size: 12px; 
+    }
+    
+    h2
+    {
+        font-size: 30px;
+    }
+
+    h3
+    {
+        font-size: 20px;
+    }
+
+    .important_button
+    {
+        font-size: 10px;
+    }
+}
